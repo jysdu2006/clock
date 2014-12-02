@@ -24,6 +24,19 @@
 			float:left;
 			margin-top: 10px;
 			margin-left:50px;
+
+		}
+		dt{
+
+		}
+		dd{
+			color: #ffffff;
+			border:2px solid #123456;
+			box-shadow: 0 1px 0 #123456;
+			background: #123456;
+		}
+		.status{
+			margin-top:80px;
 		}
 	</style>
 	<head>
@@ -32,18 +45,31 @@
 	<body>
 		<div class="myNavbar">
 			<nav>
-				<i class="glyphicon glyphicon-time">Clock Monitor</i>
+				<i class="glyphicon glyphicon-time"> Clock Monitor</i>
 				<dl>
-					<dt>统计信息</dt>
+					<dt style="padding-bottom:9px;">统计信息</dt>
 					<dd>实时统计</dd>
 					<dd>历史统计</dd>
 				</dl>
 				<dl>
-					<dt>数据导出</dt>
+					<dt style="padding-bottom:9px;">数据导出</dt>
 					<dd>实时数据</dd>
 					<dd>历史数据</dd>
 				</dl>
 			</nav>
+		</div>
+
+
+		<div class="status">
+			<div class="col-md-1"></div>
+			<div class="col-md-3" id="statusNum">
+				<p>基准时间：2014年12月2日23:10:35<br/>时间差允许范围内5台<br/>状态异常2台</p>
+			</div>
+			<div class="col-md-4" id="statusPic">
+				<canvas id="myCanvas" width="400" height="200" style="border:1px solid #c3c3c3;">Your browser does not support the canvas element.
+			</div>
+			<div class="col-md-3" id="statusHis"></div>
+			<div class="col-md-1"></div>
 		</div>
 
 
@@ -62,5 +88,52 @@
 			else
 				$next.addClass('hidden').siblings('dd').addClass('hidden');
 		});
+		$('dt').hover(function(){
+			$next=$(this).next();
+			$next.removeClass('hidden').siblings('dd').removeClass('hidden');
+		},function(){});
+		$('dd').hover(function(){},function(){
+			$(this).addClass('hidden').siblings('dd').addClass('hidden');
+		});
+
+
+		function drawPic(){
+			var c=document.getElementById("myCanvas");
+			var ctx=c.getContext("2d");
+			ctx.beginPath();
+			ctx.strokeStyle="#9a0000";
+			ctx.lineWidth=10;
+			ctx.lineCap="round";
+			ctx.moveTo(10,200);ctx.lineTo(10,50);
+			ctx.moveTo(50,200);ctx.lineTo(50,70);
+			ctx.moveTo(90,200);ctx.lineTo(90,100);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.strokeStyle="#009a00";
+			ctx.moveTo(130,200);ctx.lineTo(130,50);
+			ctx.moveTo(170,200);ctx.lineTo(170,70);
+			ctx.moveTo(210,200);ctx.lineTo(210,100);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.strokeStyle="#00009a";
+			ctx.moveTo(250,200);ctx.lineTo(250,50);
+			ctx.moveTo(290,200);ctx.lineTo(290,70);
+			ctx.moveTo(330,200);ctx.lineTo(330,100);
+			ctx.stroke();
+
+			ctx.beginPath();
+			ctx.lineWidth=0.5;
+			ctx.strokeStyle="#000000";
+			ctx.moveTo(0,30);ctx.lineTo(400,30);
+			ctx.moveTo(0,60);ctx.lineTo(400,60);
+			ctx.moveTo(0,90);ctx.lineTo(400,90);
+			ctx.moveTo(0,120);ctx.lineTo(400,120);
+			ctx.moveTo(0,150);ctx.lineTo(400,150);
+			ctx.moveTo(0,180);ctx.lineTo(400,180);
+			ctx.stroke();
+		}
+		drawPic();
 	</script>
 </html>
