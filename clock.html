@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		body{
+			font-family: "Times New Roman", Times, serif;
+			color: #000000;
+		}
+		nav{
+			background-color: #123456;
+			height: 40px;
+			color: #ffffff;
+			font-size: 15px;
+		}
+		nav i{
+			float: left;
+			margin-top: 10px;
+			margin-left:30px;
+		}
+		nav dl{
+			float:left;
+			margin-top: 10px;
+			margin-left:50px;
+		}
+	</style>
+	<head>
+		<title>Clock Monitor</title>
+	</head>
+	<body>
+		<div class="myNavbar">
+			<nav>
+				<i class="glyphicon glyphicon-time">Clock Monitor</i>
+				<dl>
+					<dt>统计信息</dt>
+					<dd>实时统计</dd>
+					<dd>历史统计</dd>
+				</dl>
+				<dl>
+					<dt>数据导出</dt>
+					<dd>实时数据</dd>
+					<dd>历史数据</dd>
+				</dl>
+			</nav>
+		</div>
+
+
+		<div class="showTime"></div>
+
+
+		<div class="pageTail"></div>
+	</body>
+
+	<script type="text/javascript">
+		$('dd').addClass('hidden');
+		$('dt').click(function(){
+			$next=$(this).next();
+			if($next.hasClass('hidden'))
+				$next.removeClass('hidden').siblings('dd').removeClass('hidden');
+			else
+				$next.addClass('hidden').siblings('dd').addClass('hidden');
+		});
+	</script>
+</html>
