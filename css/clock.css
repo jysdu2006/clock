@@ -29,16 +29,34 @@
 			background: #123456;
 		}
 		.status{
-			margin-top:80px;
-			vertical-align: middle;
+			padding:80px;
+			margin-bottom: 80px;
 		}
 
 
-		.showTime{
-			margin: 80px;
+
+		.panel{
+			margin:50px;
+
 		}
+
 		.panel-heading i{
 			padding-right: 20px;
 			float: right;
 			cursor:pointer;
+		}
+
+		#statusNum{
+			background: #223311;
+			color:yellow;
+			width:300px;
+			height: 200px;
+			margin-right: 50px;
+		}
+		#statusHis{
+			background: #223311;
+			color:yellow;
+			width:300px;
+			height: 200px;
+			margin-left: 50px;
 		}

@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="http://www.see-source.com/bootstrap/css/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="http://www.see-source.com/bootstrap/js/jquery.js"></script>
+
+<script type="text/javascript" src="http://www.see-source.com/bootstrap/js/bootstrap-tooltip.js"></script>
+<script type="text/javascript" src="http://www.see-source.com/bootstrap/js/bootstrap-popover.js"></script>
+<style type="text/css">
+  body{margin: 100px;}
+</style>
+</head>
+
+<body>
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on left
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on top
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
+
+<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on right
+</button>
+
+</body>
+</html>
+<script type="text/javascript">
+$('#example').popover();
+</script>

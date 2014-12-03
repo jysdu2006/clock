@@ -2,10 +2,11 @@
 <html>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/clock.css">
+	
 	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
 	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/clock.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/clock.css">
 	<head>
 		<title>Clock Monitor</title>
 	</head>
@@ -36,7 +37,6 @@
 				<canvas id="myCanvas" width="400" height="200" style="border:1px solid #c3c3c3;">Your browser does not support the canvas element.
 			</div>
 			<div class="col-md-3" id="statusHis" style="text-align:center;">
-				<div class="switch switch-small"><input type="checkbox" /></div>
 				<p>误差最大的机器<br/>误差最小的机器<br/>差错log</p>
 			</div>
 			<div class="col-md-1"></div>
@@ -48,8 +48,8 @@
 				<div class="panel panel-default" id="fdepMes">
 					<div class="panel-heading">
 						<span>Fdep消息系统</span>
+						<i class="glyphicon glyphicon-stats" data-toggle="popover" title="Fdep消息系统" data-content=""></i>
 						<i class="glyphicon glyphicon-cog"></i>
-						<i class="glyphicon glyphicon-stats" data-toggle="popover"></i>
 						<i class="glyphicon glyphicon-plus"></i>
 					</div>
 					<div class="panel-body"></div>
@@ -57,8 +57,8 @@
 				<div class="panel panel-default" id="fdepFile">
 					<div class="panel-heading">
 						<span>Fdep文件系统</span>
+						<i class="glyphicon glyphicon-stats" data-toggle="popover" title="Fdep文件系统" data-content=""></i>
 						<i class="glyphicon glyphicon-cog"></i>
-						<i class="glyphicon glyphicon-stats"></i>
 						<i class="glyphicon glyphicon-plus"></i>
 					</div>
 					<div class="panel-body"></div>
@@ -66,8 +66,8 @@
 				<div class="panel panel-default" id="abchina">
 					<div class="panel-heading">
 						<span>农行前置</span>
+						<i class="glyphicon glyphicon-stats" data-toggle="popover" title="农行前置" data-content=""></i>
 						<i class="glyphicon glyphicon-cog"></i>
-						<i class="glyphicon glyphicon-stats"></i>
 						<i class="glyphicon glyphicon-plus"></i>
 					</div>
 					<div class="panel-body"></div>
@@ -75,8 +75,8 @@
 				<div class="panel panel-default" id="others">
 					<div class="panel-heading">
 						<span>其他系统</span>
+						<i class="glyphicon glyphicon-stats" data-toggle="popover" title="其他系统" data-content=""></i>
 						<i class="glyphicon glyphicon-cog"></i>
-						<i class="glyphicon glyphicon-stats"></i>
 						<i class="glyphicon glyphicon-plus"></i>
 					</div>
 					<div class="panel-body"></div>
@@ -88,5 +88,4 @@
 
 		<div class="pageTail"></div>
 	</body>
-
 </html>

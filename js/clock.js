@@ -61,4 +61,14 @@ $(document).ready(function(){
 		});
 
 		
+		$('.glyphicon.glyphicon-stats').popover();
+		function setpopover(a){
+			title=$(a).siblings('span').html();
+			alert(title);
+			$(a).attr({'data-content':title});
+		}
+		$('[data-toggle="popover"]').each(function(){
+			$title=$(this).siblings('span').html()+"，此系统时钟一切正常";
+			$(this).attr({'data-content':$title});
+		});
 });
