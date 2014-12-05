@@ -28,10 +28,6 @@
 			box-shadow: 0 1px 0 #123456;
 			background: #123456;
 		}
-		.status{
-			padding:80px;
-			margin-bottom: 80px;
-		}
 
 
 
@@ -51,12 +47,26 @@
 			color:yellow;
 			width:300px;
 			height: 200px;
-			margin-right: 50px;
+			display: inline-block;
+			/*float: left;
+			margin: 20px;*/
 		}
 		#statusHis{
 			background: #223311;
 			color:yellow;
 			width:300px;
 			height: 200px;
-			margin-left: 50px;
+			display: inline-block;
+			/*float: left;
+			margin: 20px;*/
+		}
+		#statusPic{
+			display: inline-block;
+			/*margin: 20px;
+			float: left;*/
+		}
+
+		.status{
+			/*margin: 0 auto;
+			display: inline-block;*/
 		}
