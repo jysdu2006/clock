@@ -47,26 +47,23 @@
 			color:yellow;
 			width:300px;
 			height: 200px;
-			display: inline-block;
-			/*float: left;
-			margin: 20px;*/
+			margin: 20px;
 		}
 		#statusHis{
 			background: #223311;
 			color:yellow;
 			width:300px;
 			height: 200px;
-			display: inline-block;
-			/*float: left;
-			margin: 20px;*/
+			margin: 20px;
 		}
 		#statusPic{
-			display: inline-block;
-			/*margin: 20px;
-			float: left;*/
+			margin: 20px;
 		}
 
 		.status{
+			display: flex;
+  			justify-content: center;
+  			margin: 50px;
 			/*margin: 0 auto;
 			display: inline-block;*/
 		}
