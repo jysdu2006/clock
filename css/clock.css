@@ -33,6 +33,7 @@
 
 		.panel{
 			margin:50px;
+			width: 350px;
 
 		}
 
@@ -48,6 +49,7 @@
 			width:300px;
 			height: 200px;
 			margin: 20px;
+			float: left;
 		}
 		#statusHis{
 			background: #223311;
@@ -55,15 +57,30 @@
 			width:300px;
 			height: 200px;
 			margin: 20px;
+			float: left;
 		}
 		#statusPic{
 			margin: 20px;
+			float: left;
 		}
 
 		.status{
 			display: flex;
   			justify-content: center;
   			margin: 50px;
+  			position: absolute;
 			/*margin: 0 auto;
 			display: inline-block;*/
+		}
+
+		.showTime{
+
+			position: absolute;
+
+			top: 300px;
+			width: 800px;
+		}
+
+		.popover{
+			width: 150px;
 		}

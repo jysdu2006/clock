@@ -57,7 +57,7 @@ $(document).ready(function(){
 
 		$('.glyphicon.glyphicon-plus').click(function(){
 			$par=$(this).parent();
-			$par.siblings('.panel-body').append('<img src="img/computer.jpg" width="20%" height="20%" alt="...">');
+			$par.siblings('.panel-body').append('<img src="img/computer.jpg" width="25%" height="25%" alt="...">');
 		});
 
 		
@@ -71,4 +71,10 @@ $(document).ready(function(){
 			$title=$(this).siblings('span').html()+"，此系统时钟一切正常";
 			$(this).attr({'data-content':$title});
 		});
+
+		$('.glyphicon.glyphicon-cog').click(function(){
+			$(this).attr("data-toggle","modal")
+		});
+
+
 });
